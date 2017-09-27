@@ -61,9 +61,13 @@ describe List do
 
   	it "changes the tasks[index] from incomplete to completed" do
   		expect(list.tasks[0]).not_to be_complete
-  		list.complete_task(0)
+  		expect(list.complete_task(0)).to eq(true)
   		expect(list.tasks[0]).to be_complete
   	end
+
+    it "returns false for not existing task" do
+      expect(list.complete_task(5)).to eq(false)
+    end
   end
 
 	describe "#delete_task" do
