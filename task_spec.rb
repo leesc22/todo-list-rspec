@@ -48,3 +48,17 @@ describe Task do
     end
   end
 end
+
+# require "rspec-given"
+# require "rspec"
+# require_relative "task"
+
+# describe Task do
+#   Given(:description) { "Walk the giraffe" }
+#   Given(:task) { Task.new(description) }
+
+#   describe "#complete!" do
+#     When {task.complete!}
+#     Then {task.complete? == true}
+#   end
+# end
